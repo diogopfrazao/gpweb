@@ -1,0 +1,10 @@
+SET FOREIGN_KEY_CHECKS=0;
+
+UPDATE versao SET versao_codigo='8.5.18';
+UPDATE versao SET ultima_atualizacao_bd='2018-08-14';
+UPDATE versao SET ultima_atualizacao_codigo='2018-08-14';
+UPDATE versao SET versao_bd=505;
+
+UPDATE menu_item SET menu_item_permissao_extra='$Aplic->checarModulo(''projetos'', ''acesso'') || $Aplic->checarModulo(''tarefas'', ''acesso'') || $Aplic->checarModulo(''projetos'', ''acesso'', null, null, ''demandas'') || $Aplic->checarModulo(''projetos'', ''acesso'', null, null, ''viabilidade'') || $Aplic->checarModulo(''projetos'', ''acesso'', null, null, ''abertura'') || $Aplic->checarModulo(''projetos'', ''acesso'', null, null, ''banco'') || $Aplic->checarModulo(''projetos'', ''acesso'', null, null, ''projetos_lista'') || $Aplic->checarModulo(''projetos'', ''acesso'', null, null, ''projetos_rapido'') || $Aplic->checarModulo(''projetos'', ''acesso'', null, null, ''projetos_tarefas'') || $Aplic->checarModulo(''projetos'', ''acesso'', null, null, ''projetos_wbs'') || $Aplic->checarModulo(''projetos'', ''acesso'', null, null, ''projetos_wbsgrafico'') || $Aplic->checarModulo(''projetos'', ''acesso'', null, null, ''programa'') || $Aplic->checarModulo(''projetos'', ''acesso'', null, null, ''macro'') || $Aplic->checarModulo(''projetos'', ''acesso'', null, null, ''projetos_envio'') || $Aplic->checarModulo(''projetos'', ''acesso'', null, null, ''relatorios_projeto'') || $Aplic->checarModulo(''projetos'', ''acesso'', null, null, ''licao'') || $Aplic->checarModulo(''projetos'', ''acesso'', null, null, ''importar'') || $Aplic->checarModulo(''projetos'', ''acesso'', null, null, ''exportar'') || $Aplic->checarModulo(''projetos'', ''acesso'', null, null, ''modelo'') || $Aplic->checarModulo(''relatorios'', ''acesso'')' WHERE menu_item_chave='projetos';
+
+UPDATE menu_item SET menu_item_permissao_extra='$Aplic->checarModulo(''projetos'', ''acesso'') || $Aplic->checarModulo(''projetos'', ''acesso'', null, null, ''relatorios_projeto'') || $Aplic->checarModulo(''relatorios'', ''acesso'')' WHERE menu_item_chave='relatorios_projeto';
